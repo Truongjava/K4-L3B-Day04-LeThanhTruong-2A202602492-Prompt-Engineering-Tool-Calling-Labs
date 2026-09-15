@@ -12,9 +12,9 @@
 
 ## Thành viên
 
-| Họ và tên | MSSV | GitHub | Vai trò và công việc | File/commit/PR |
-|---|---|---|---|---|
-| Lê Thanh Trường | 2A202602492 | _(chờ điền)_ | Setup env, chạy eval v0/v1, cải thiện system_prompt, phân tích failure patterns, viết REPORT.md | Các file trong `starter_v0/artifacts/`, `starter_v0/providers/ai_box_provider.py` |
+| Họ và tên       | MSSV        | GitHub                                                                                                                                                                                                                 | Vai trò và công việc                                                                              | File/commit/PR                                                                        |
+| ------------------ | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Lê Thanh Trường | 2A202602492 | [github.com/Truongjava/K4-L3B-Day04-LeThanhTruong-2A202602492-Prompt-Engineering-Tool-Calling-Labs.git](https://github.com/Truongjava/K4-L3B-Day04-LeThanhTruong-2A202602492-Prompt-Engineering-Tool-Calling-Labs.git)  | Setup env, chạy eval v0/v1, cải thiện system_prompt, phân tích failure patterns, viết REPORT.md | Các file trong`starter_v0/artifacts/`, `starter_v0/providers/ai_box_provider.py` |
 
 ## Nhận xét chung
 
