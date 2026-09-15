@@ -1,3 +1,4 @@
+from providers.ai_box_provider import AIBOXProvider
 from providers.openai_provider import OpenAIProvider
 from providers.openrouter_provider import OpenRouterProvider
 from providers.anthropic_provider import AnthropicProvider
@@ -13,4 +14,6 @@ def make_provider(name: str):
         return AnthropicProvider()
     if name == "gemini":
         return GeminiProvider()
+    if name == "ai-box":
+        return AIBOXProvider()
     raise ValueError(f"Unknown provider: {name}")
