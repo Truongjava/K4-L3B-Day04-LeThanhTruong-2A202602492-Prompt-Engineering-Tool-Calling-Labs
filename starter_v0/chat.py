@@ -117,9 +117,18 @@ def run_model_tool_loop(
             round_record["tool_results"].append(event)
             all_tool_events.append(event)
 
+            # Show tool result or error so the run is inspectable (UI requirement).
+            result = event.get("result", {})
+            if isinstance(result, dict) and result.get("error"):
+                print(f"[result/error] {call.name} -> ERROR: {result.get('error')} {result.get('message', '')}".rstrip())
+            elif isinstance(result, dict):
+                # Keep the console readable: print a compact summary of key fields.
+                summary = {k: v for k, v in result.items() if k in ("status", "service", "environment", "asset_id", "check", "title", "template", "ticket_id", "employee_id", "question")}
+                if summary:
+                    print(f"[result] {call.name} -> {json.dumps(summary, ensure_ascii=True, sort_keys=True)}")
+
             # Detect the clarification/pause tool by its output flag (rename-proof),
             # not by a hard-coded tool name.
-            result = event.get("result", {})
             if isinstance(result, dict) and result.get("awaiting_user"):
                 question = result.get("question") or call.args.get("question") or "Bạn bổ sung thêm thông tin nhé."
                 rounds.append(round_record)
